@@ -1,0 +1,23 @@
+{
+    "name": "Task Control",
+    "short_name": "Tarefas",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0077cc",
+    "icons": [
+      {
+        "src": "assets/img/Logo_Task_Control-removebg-preview.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/img/Logo_Task_Control-removebg-preview.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+
+  
+  

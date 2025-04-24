@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Control</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0077cc" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="icon" href="assets/img/Logo_Task_Control-removebg-preview.png" type="image/png" />
+</head>
+<body>
+  <div class="site-content">
+    <header class="header">
+      <h1 class="animated-title">TaskControl</h1>
+  </header>
+  <div class="calendar" id="calendar"></div>
+  <div class="filters">
+    <button onclick="filterTasks('hoje')">
+      Hoje <lottie-player class="lottie-icon" src="https://assets7.lottiefiles.com/packages/lf20_9gq2lgy6.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    </button>
+    <button onclick="filterTasks('semana')">
+      Semana <lottie-player class="lottie-icon" src="https://assets1.lottiefiles.com/private_files/lf30_5ttqpi5v.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    </button>
+    <button onclick="filterTasks('concluidas')">
+      Concluídas <lottie-player class="lottie-icon" src="https://assets10.lottiefiles.com/packages/lf20_kyu7xb1h.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    </button>
+  </div>
+
+  <div class="task-form">
+    <input type="text" id="taskInput" placeholder="Descrição da Tarefa">
+    <input type="datetime-local" id="taskTime">
+    <button onclick="addTask()">Adicionar Tarefa</button>
+    <button class="cancel-edit-button" onclick="cancelEdit()">Cancelar Edição</button>
+  </div>
+
+  <div class="task-list" id="taskList"></div>
+
+    <section class="sound-controls">
+        <h3>🔔 Personalizar Alarme</h3>
+        
+        <label for="customSound" class="sound-label">
+          🎵 Escolher Som
+          <input type="file" id="customSound" accept="audio/*" hidden>
+        </label>
+      
+        <button id="resetSound" class="reset-button">🔄 Resetar para Som Padrão</button>
+      
+        <audio id="alertSound" preload="auto"></audio>
+      </section>
+
+      
+      <br>
+<!-- Rodapé completo -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>© 2025 - Todos os direitos reservados | <a href="https://www.termsfeed.com/live/9548ec5e-c2c7-45e8-b458-a5cb0ca9e680" target="_blank">Termos e Condições</a></p>
+    <p>Desenvolvido por <a href="https://github.com/Cassio999/C-ssio999" target="_blank">Cassio Oliver</a></p>
+    <p>Desenvolvedor Web</p>
+  </div>
+</footer>
+
+<!-- Botão Flutuante com Lottie -->
+<div id="btnTop" title="Voltar ao Topo">
+  <lottie-player
+    src="https://assets9.lottiefiles.com/private_files/lf30_m6j5igxb.json"
+    background="transparent"
+    speed="1"
+    style="width: 50px; height: 50px;"
+    loop
+    autoplay
+  ></lottie-player>
+</div>
+
+<!-- Script do Lottie -->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</script>
+      <script src="assets/js/service-worker.js"></script>
+      <script src="assets/js/style.js"></script>
+</body>
+</html>
